@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="borderPane" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.tictactoeclient.GameViewController" prefWidth="780" prefHeight="450">
+
+    <right>
+        <BorderPane>
+            <top>
+                <VBox spacing="5">
+                    <Text fx:id="usernameText" text="Ваше имя: " textAlignment="CENTER"/>
+                    <Text fx:id="idText" text="Идентификатор сессии: " textAlignment="CENTER"/>
+                    <Button fx:id="buttonNewGame" text="Новая игра" onAction="#newGame" maxWidth="Infinity"/>
+                    <Text fx:id="turnText" text="Подождите начала игры"/>
+                </VBox>
+            </top>
+            <center>
+                <ScrollPane fx:id="scrollPane">
+                    <Text fx:id="historyText" wrappingWidth="300"/>
+                </ScrollPane>
+
+            </center>
+            <bottom>
+                <HBox prefHeight="20">
+                    <TextField fx:id="messageTextField" prefWidth="230"/>
+                    <Button text="Отправить" onAction="#sendMessage"/>
+                </HBox>
+            </bottom>
+        </BorderPane>
+    </right>
+
+
+        <GridPane fx:id="gridPane" gridLinesVisible="true"/>
+
+
+
+
+
+
+
+</BorderPane>
